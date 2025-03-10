@@ -14,7 +14,11 @@ Caso de Prueba #1: Caso Normal - Registro de Actividad
 
 | ID Actividad |    Fecha/Hora    | Supervisor |        Descripcion       | Condiciones Climaticas |      Anexos      |
 |--------------|------------------|------------|--------------------------|------------------------|------------------|
-|    232245    | 08/03/2025 15:36 | Juan Perez | Inicio de Nuevo Proyecto |   Nublado y Lluvioso   | InfoProyecto.pdf | 
+|    232245    | 08/03/2025 15:36 | Supervisor | Inicio de Nuevo Proyecto |   Nublado y Lluvioso   | InfoProyecto.pdf | 
+
+|   Nombre   |       Correo       | Contraseña |
+|------------|--------------------|------------|
+| Juan Perez | juanp225@gmail.com | JuanPz4875 |
 
 
 Caso de Prueba #2: Caso Normal - Registro de Actividad con Fecha y Hora
