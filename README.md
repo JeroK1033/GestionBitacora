@@ -459,17 +459,3 @@ Permite a los supervisores modificar su contraseña.
 
 
 
-
-# Casos de Prueba - Funcionalidad 5 y 6
-
-## Funcionalidad 5: Iniciar sesión
-
-
-
-## Funcionalidad 6: Cambiar contraseña
-
-
-
-
-
-
