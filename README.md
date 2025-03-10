@@ -210,7 +210,7 @@ Permite consultar actividades en un rango de fechas determinado.
 
 | Fecha Incio |  Fecha Fin | Supervisor | 
 |-------------|------------|------------| 
-| 01/01/2023  | 31/12/2025 | Juan Perez |
+| 01/01/2023  | 31/12/2025 |    None    |
 
 |   Resultado  |  
 |--------------|
@@ -221,24 +221,59 @@ Permite consultar actividades en un rango de fechas determinado.
 
 Genera un informe en PDF sobre actividades en un rango de fechas.
 
-### Caso de Prueba #1: Caso Normal - Generación de reporte con datos completos.
+### Caso de Prueba #1: Caso Normal - Generación de reporte con datos completos
 
-### Caso de Prueba #2: Caso Normal - Generación de reporte sin actividades en el rango de fechas.
+| Fecha Inicio | Fecha Fin | Supervisor | Anexos Incluidos | Resultado |
+|-------------|----------|------------|------------------|-----------|
+| 01/01/2025 | 31/01/2025 | Juan Perez | Sí | PDF generado correctamente |
 
-### Caso de Prueba #3: Caso Normal - Generación de reporte con anexos.
+### Caso de Prueba #2: Caso Normal - Generación de reporte sin actividades en el rango de fechas
 
-### Caso de Prueba #4: Caso Extremo - Generación de un reporte con miles de actividades.
+| Fecha Inicio | Fecha Fin | Supervisor | Resultado |
+|-------------|----------|------------|-----------|
+| 01/01/2030 | 31/01/2030 | Maria Hernandez | No hay actividades registradas en este rango |
 
-### Caso de Prueba #5: Caso Extremo - Generación de reporte en el formato más grande permitido.
+### Caso de Prueba #3: Caso Normal - Generación de reporte con anexos
 
-### Caso de Prueba #6: Caso Extremo - Generación de reporte con filtros avanzados.
+| Fecha Inicio | Fecha Fin | Supervisor | Anexos Incluidos | Resultado |
+|-------------|----------|------------|------------------|-----------|
+| 01/06/2024 | 10/06/2024 | Camila Rodriguez | Sí | PDF generado con anexos |
 
-### Caso de Prueba #7: Caso de Error - Intento de generar un reporte sin definir fechas.
+### Caso de Prueba #4: Caso Extremo - Generación de un reporte con miles de actividades
 
-### Caso de Prueba #8: Caso de Error - Intento de generar un reporte con fechas inválidas.
+| Fecha Inicio | Fecha Fin | Supervisor | Número de Actividades | Resultado |
+|-------------|----------|------------|----------------------|-----------|
+| 01/01/2020 | 31/12/2025 | Mateo Herrera | 5000+ | PDF generado correctamente |
 
-### Caso de Prueba #9: Caso de Error - Intento de generar un reporte sin autenticación.
+### Caso de Prueba #5: Caso Extremo - Generación de reporte en el formato más grande permitido
 
+| Fecha Inicio | Fecha Fin | Supervisor | Formato | Resultado |
+|-------------|----------|------------|---------|-----------|
+| 01/01/2024 | 31/12/2024 | Alejandro Fernandez | A3 | PDF generado en formato A3 |
+
+### Caso de Prueba #6: Caso Extremo - Generación de reporte con filtros avanzados
+
+| Fecha Inicio | Fecha Fin | Supervisor | Condiciones Climáticas | Resultado |
+|-------------|----------|------------|------------------------|-----------|
+| 01/06/2024 | 10/06/2024 | Lucas Correa | Lluvioso | PDF generado correctamente |
+
+### Caso de Prueba #7: Caso de Error - Intento de generar un reporte sin definir fechas
+
+| Fecha Inicio | Fecha Fin | Supervisor | Error esperado |
+|-------------|----------|------------|---------------|
+| None | None | Valentina Gomez | Debe ingresar un rango de fechas válido |
+
+### Caso de Prueba #8: Caso de Error - Intento de generar un reporte con fechas inválidas
+
+| Fecha Inicio | Fecha Fin | Supervisor | Error esperado |
+|-------------|----------|------------|---------------|
+| 32/06/2024 | 10/06/2024 | Camila Rodriguez | Formato de fecha incorrecto |
+
+### Caso de Prueba #9: Caso de Error - Intento de generar un reporte sin autenticación
+
+| Fecha Inicio | Fecha Fin | Supervisor | Error esperado |
+|-------------|----------|------------|---------------|
+| 01/06/2024 | 10/06/2024 | None | Usuario no autenticado |
 
 
 ## Funcionalidad 4: Crear cuenta
@@ -310,4 +345,6 @@ Permite a los supervisores modificar su contraseña.
 ### Caso de Prueba #8: Caso de Error - Intento de cambio de contraseña con claves no coincidentes.
 
 ### Caso de Prueba #9: Caso de Error - Intento de cambio de contraseña sin estar autenticado.
+
+
 
