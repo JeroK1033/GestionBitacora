@@ -128,9 +128,9 @@ Permite consultar actividades en un rango de fechas determinado.
 |-------------|------------|------------| 
 | 01/06/2024  | 10/06/2024 | Juan Perez |
 
-|   Resultado  |  
-|--------------|
-| 3 Actividades|
+|   Resultado   |  
+|---------------|
+| 3 Actividades |
 
 
 
@@ -141,21 +141,80 @@ Permite consultar actividades en un rango de fechas determinado.
 |----------------|------------| 
 |   01/06/2024   | Juan Perez |
 
+|   Resultado |  
+|-------------|
+| 1 Actividad |
+
 
 ### Caso de Prueba #3: Caso Normal - Consulta de actividades con múltiples filtros.
 
+| Fecha Incio |  Fecha Fin | Condiciones Climaticas | Supervisor | 
+|-------------|------------|------------------------|------------| 
+| 01/06/2024  | 10/06/2024 |         Neblina        | Juan Perez |
+
+|   Resultado  |  
+|--------------|
+| 1 Actividad  |
+
 ### Caso de Prueba #4: Caso Extremo - Consulta de actividades en un rango de fechas de varios años.
+
+| Fecha Incio |  Fecha Fin | Supervisor | 
+|-------------|------------|------------| 
+| 01/01/2023  | 31/12/2025 | Juan Perez |
+
+|   Resultado   |  
+|---------------|
+| 3 Actividades |
 
 ### Caso de Prueba #5: Caso Extremo - Consulta con múltiples filtros aplicados.
 
-### Caso de Prueba #6: Caso Extremo - 
+| Fecha Incio |  Fecha Fin |    Supervisor    | Condiciones CLimaticas | %Descripcion% |
+|-------------|------------|------------------|------------------------|---------------|
+| 01/06/2024  | 10/06/2024 | Camila Rodriguez |         Soleado        |   "Proyecto"  |
+
+|  Resultado  |  
+|-------------|
+| 1 Actividad |
+
+### Caso de Prueba #6: Caso Extremo - Consulta con Fecha Futura
+
+| Fecha Incio |  Fecha Fin | Supervisor | 
+|-------------|------------|------------| 
+| 01/01/2030  | 31/12/2030 | Juan Perez |
+
+|   Resultado   |  
+|---------------|
+| 0 Actividades |
 
 ### Caso de Prueba #7: Caso de Error - Consulta sin definir fechas.
 
+| Fecha Incio |  Fecha Fin | Supervisor | 
+|-------------|------------|------------| 
+|    None     |   None     | Juan Perez |
+
+|   Resultado  |  
+|--------------|
+|     Error    |
+
 ### Caso de Prueba #8: Caso de Error - Consulta con fecha de inicio mayor que la fecha de fin.
+
+| Fecha Incio |  Fecha Fin | Supervisor | 
+|-------------|------------|------------| 
+| 08/08/2025  | 07/07/2024 | Juan Perez |
+
+|   Resultado  |  
+|--------------|
+|     Error    |
 
 ### Caso de Prueba #9: Caso de Error - Intento de consulta sin autenticación.
 
+| Fecha Incio |  Fecha Fin | Supervisor | 
+|-------------|------------|------------| 
+| 01/01/2023  | 31/12/2025 | Juan Perez |
+
+|   Resultado  |  
+|--------------|
+|    Error     |
 
 
 ## Funcionalidad 3: Generar reporte de la bitácora
