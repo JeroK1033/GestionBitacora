@@ -344,49 +344,49 @@ Facilita el acceso de los supervisores al sistema.
 
 | Correo | Contraseña | Resultado |
 |--------|------------|-----------|
-| juan.perez@example.com | JuanP@123 | Sesión iniciada correctamente |
+| juan.perez@gmail.com | JuanP@123 | Sesión iniciada correctamente |
 
 ### Caso de Prueba #2: Caso Normal - Inicio de sesión con recordar sesión activado
 
 | Correo | Contraseña | Recordar Sesión | Resultado |
 |--------|------------|----------------|-----------|
-| maria.lopez@example.com | Maria2024# | Sí | Sesión iniciada y recordada |
+| maria.lopez@gmail.com | Maria2024# | Sí | Sesión iniciada y recordada |
 
 ### Caso de Prueba #3: Caso Normal - Inicio de sesión con múltiples intentos
 
 | Correo | Contraseña | Intentos | Resultado |
 |--------|------------|----------|-----------|
-| carlos.r@example.com | Carlos2024# | 2 | Sesión iniciada correctamente |
+| carlos.r@gmail.com | Carlos2024# | 2 | Sesión iniciada correctamente |
 
 ### Caso de Prueba #4: Caso Extremo - Inicio de sesión con una contraseña en el límite de longitud
 
 | Correo | Contraseña | Resultado |
 |--------|------------|-----------|
-| luis.gomez@example.com | 32CaracteresLargos1234#@ | Sesión iniciada correctamente |
+| luis.gomez@gmail.com | 32CaracteresLargos1234#@ | Sesión iniciada correctamente |
 
 ### Caso de Prueba #5: Caso Extremo - Inicio de sesión con una contraseña que contiene solo letras minúsculas
 
 | Correo | Contraseña | Resultado |
 |--------|------------|-----------|
-| maria.lopez@example.com | mariaclave | Sesión iniciada correctamente |
+| maria.lopez@gmail.com | mariaclave | Sesión iniciada correctamente |
 
 ### Caso de Prueba #6: Caso Extremo - Inicio de sesión con una contraseña que contiene solo números
 
 | Correo | Contraseña | Resultado |
 |--------|------------|-----------|
-| carlos.r@example.com | 12345678 | Sesión iniciada correctamente |
+| carlos.r@gmail.com | 12345678 | Sesión iniciada correctamente |
 
 ### Caso de Prueba #7: Caso de Error - Inicio de sesión con contraseña incorrecta
 
 | Correo | Contraseña | Error esperado |
 |--------|------------|---------------|
-| juan.perez@example.com | Incorrecta123 | "Contraseña incorrecta" |
+| juan.perez@gmail.com | Incorrecta123 | "Contraseña incorrecta" |
 
 ### Caso de Prueba #8: Caso de Error - Inicio de sesión con email no registrado
 
 | Correo | Contraseña | Error esperado |
 |--------|------------|---------------|
-| usuario.nuevo@example.com | NuevaClave@456 | "El correo no está registrado" |
+| usuario.nuevo@gmail.com | NuevaClave@456 | "El correo no está registrado" |
 
 ### Caso de Prueba #9: Caso de Error - Inicio de sesión con un email en formato inválido
 
@@ -405,49 +405,49 @@ Permite a los supervisores modificar su contraseña.
 
 | Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
 |--------|---------------------|------------------|-----------|
-| juan.perez@example.com | JuanP@123 | JuanP@456 | Contraseña actualizada |
+| juan.perez@gmail.com | JuanP@123 | JuanP@456 | Contraseña actualizada |
 
 ### Caso de Prueba #2: Caso Normal - Cambio de contraseña con una clave fuerte
 
 | Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
 |--------|---------------------|------------------|-----------|
-| maria.lopez@example.com | Maria2024# | MariaFuerte2024! | Contraseña actualizada |
+| maria.lopez@gmail.com | Maria2024# | MariaFuerte2024! | Contraseña actualizada |
 
 ### Caso de Prueba #3: Caso Normal - Cambio de contraseña seguido de un inicio de sesión exitoso con la nueva clave
 
 | Correo | Contraseña | Resultado |
 |--------|------------|-----------|
-| juan.perez@example.com | JuanP@456 | Sesión iniciada correctamente |
+| juan.perez@gmail.com | JuanP@456 | Sesión iniciada correctamente |
 
 ### Caso de Prueba #4: Caso Extremo - Cambio de contraseña con la más larga permitida
 
 | Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
 |--------|---------------------|------------------|-----------|
-| luis.gomez@example.com | Luis2023 | 32CaracteresLargos1234#@ | Contraseña actualizada |
+| luis.gomez@gmail.com | Luis2023 | 32CaracteresLargos1234#@ | Contraseña actualizada |
 
 ### Caso de Prueba #5: Caso Extremo - Cambio de contraseña utilizando exclusivamente caracteres especiales
 
 | Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
 |--------|---------------------|------------------|-----------|
-| maria.lopez@example.com | Maria2024# | @#$%^&*()_+ | Contraseña actualizada |
+| maria.lopez@gmail.com | Maria2024# | @#$%^&*()_+ | Contraseña actualizada |
 
 ### Caso de Prueba #6: Caso Extremo - Cambio de contraseña con caracteres especiales y números
 
 | Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
 |--------|---------------------|------------------|-----------|
-| carlos.r@example.com | Carlos2024# | C@rlos1234! | Contraseña actualizada |
+| carlos.r@gmail.com | Carlos2024# | C@rlos1234! | Contraseña actualizada |
 
 ### Caso de Prueba #7: Caso de Error - Intento de cambio de contraseña con la clave anterior incorrecta
 
 | Correo | Contraseña Anterior | Nueva Contraseña | Error esperado |
 |--------|---------------------|------------------|---------------|
-| juan.perez@example.com | Incorrecta123 | JuanP@456 | "Contraseña anterior incorrecta" |
+| juan.perez@gmail.com | Incorrecta123 | JuanP@456 | "Contraseña anterior incorrecta" |
 
 ### Caso de Prueba #8: Caso de Error - Intento de cambio de contraseña con claves no coincidentes
 
 | Correo | Contraseña Anterior | Nueva Contraseña | Confirmación | Error esperado |
 |--------|---------------------|------------------|--------------|---------------|
-| luis.gomez@example.com | Luis2023 | LuisNuevo2024 | LuisDiferente2024 | "Las contraseñas no coinciden" |
+| luis.gomez@gmail.com | Luis2023 | LuisNuevo2024 | LuisDiferente2024 | "Las contraseñas no coinciden" |
 
 ### Caso de Prueba #9: Caso de Error - Intento de cambio de contraseña sin estar autenticado
 
@@ -457,6 +457,16 @@ Permite a los supervisores modificar su contraseña.
 
 
 
+
+
+
+# Casos de Prueba - Funcionalidad 5 y 6
+
+## Funcionalidad 5: Iniciar sesión
+
+
+
+## Funcionalidad 6: Cambiar contraseña
 
 
 
