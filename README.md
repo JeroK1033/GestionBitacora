@@ -10,13 +10,17 @@ Permite a los supervisores registrar una actividad en un día y una hora especí
 
 ## Casos de Prueba
 
-## Caso de Prueba #1: Caso Normal - Registro de Actividad
+Caso de Prueba #1: Caso Normal - Registro de Actividad
 
-| ID Actividad | Fecha/Hora | Supervisor |        Descripcion       | Condiciones Climaticas |      Anexos      |
-|--------------|------------|------------|--------------------------|------------------------|------------------|
-|    232245    | 08/03/2025 | Juan Perez | Inicio de Nuevo Proyecto |   Nublado y Lluvioso   | InfoProyecto.pdf | 
+| ID Actividad |    Fecha/Hora    | Supervisor |        Descripcion       | Condiciones Climaticas |      Anexos      |
+|--------------|------------------|------------|--------------------------|------------------------|------------------|
+|    232245    | 08/03/2025 15:36 | Juan Perez | Inicio de Nuevo Proyecto |   Nublado y Lluvioso   | InfoProyecto.pdf | 
 
-## Caso de Prueba #2: Caso Normal - Registro de Actividad con Fecha y Hora
+Caso de Prueba #2: Caso Normal - Registro de Actividad con Fecha y Hora
+
+| ID Actividad |    Fecha/Hora    |  Supervisor  |        Descripcion       | Condiciones Climaticas |      Anexos      |
+|--------------|------------------|--------------|--------------------------|------------------------|------------------|
+|    232245    | 08/03/2025 22:45 | Lucas Correa |   Revision de Proyecto   |   Nublado y Lluvioso   | InfoProyecto.pdf | 
 
 ## Caso de Prueba #3: Caso Normal - Registro de Actividad con un Anexo Incluido
 
