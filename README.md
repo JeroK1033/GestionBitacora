@@ -280,23 +280,59 @@ Genera un informe en PDF sobre actividades en un rango de fechas.
 
 Permite a los supervisores registrarse en el sistema.
 
-### Caso de Prueba #1: Caso Normal - Registro exitoso con datos válidos.
+### Caso de Prueba #1: Caso Normal - Registro exitoso con datos válidos
 
-### Caso de Prueba #2: Caso Normal - Registro con correo válido y contraseña fuerte.
+| Nombre | Correo | Contraseña | Resultado |
+|--------|--------|------------|-----------|
+| Juan Perez | juan.perez@example.com | JuanP@123 | Cuenta creada exitosamente |
 
-### Caso de Prueba #3: Caso Normal - Registro con nombre y apellido válidos.
+### Caso de Prueba #2: Caso Normal - Registro con correo válido y contraseña fuerte
 
-### Caso de Prueba #4: Caso Extremo - Registro con la contraseña más larga permitida.
+| Nombre | Correo | Contraseña | Resultado |
+|--------|--------|------------|-----------|
+| Maria Lopez | maria.lopez@example.com | Maria2024# | Cuenta creada exitosamente |
 
-### Caso de Prueba #5: Caso Extremo - Registro con caracteres especiales en el nombre.
+### Caso de Prueba #3: Caso Normal - Registro con nombre y apellido válidos
 
-### Caso de Prueba #6: Caso Extremo - Registro con un email en el límite de longitud permitida.
+| Nombre | Correo | Contraseña | Resultado |
+|--------|--------|------------|-----------|
+| Carlos Rivera | carlos.r@example.com | Carlos2024# | Cuenta creada exitosamente |
 
-### Caso de Prueba #7: Caso de Error - Registro sin correo electrónico.
+### Caso de Prueba #4: Caso Extremo - Registro con la contraseña más larga permitida
 
-### Caso de Prueba #8: Caso de Error - Registro con una contraseña muy corta.
+| Nombre | Correo | Contraseña | Resultado |
+|--------|--------|------------|-----------|
+| Luis Gómez | luis.gomez@example.com | 32CaracteresLargos1234#@ | Cuenta creada exitosamente |
 
-### Caso de Prueba #9: Caso de Error - Registro con un email ya registrado.
+### Caso de Prueba #5: Caso Extremo - Registro con caracteres especiales en el nombre
+
+| Nombre | Correo | Contraseña | Resultado |
+|--------|--------|------------|-----------|
+| Ana-María López | ana.lopez@example.com | AnaFuerte2024! | Cuenta creada exitosamente |
+
+### Caso de Prueba #6: Caso Extremo - Registro con un email en el límite de longitud permitida
+
+| Nombre | Correo | Contraseña | Resultado |
+|--------|--------|------------|-----------|
+| Ricardo Fernández | rfernandezsuperlargocorreo@example.com | Rf2024#@ | Cuenta creada exitosamente |
+
+### Caso de Prueba #7: Caso de Error - Registro sin correo electrónico
+
+| Nombre | Correo | Contraseña | Error esperado |
+|--------|--------|------------|---------------|
+| Carlos Rivera | None | Carlos2024 | "Debe ingresar un correo válido" |
+
+### Caso de Prueba #8: Caso de Error - Registro con una contraseña muy corta
+
+| Nombre | Correo | Contraseña | Error esperado |
+|--------|--------|------------|---------------|
+| Luis Gómez | luis.gomez@example.com | 123 | "La contraseña debe tener al menos 8 caracteres" |
+
+### Caso de Prueba #9: Caso de Error - Registro con un email ya registrado
+
+| Nombre | Correo | Contraseña | Error esperado |
+|--------|--------|------------|---------------|
+| Juan Perez | juan.perez@example.com | JuanP@123 | "El correo ya está registrado" |
 
 
 
@@ -304,23 +340,60 @@ Permite a los supervisores registrarse en el sistema.
 
 Facilita el acceso de los supervisores al sistema.
 
-### Caso de Prueba #1: Caso Normal - Inicio de sesión exitoso.
+### Caso de Prueba #1: Caso Normal - Inicio de sesión exitoso
 
-### Caso de Prueba #2: Caso Normal - Inicio de sesión con recordar sesión activado.
+| Correo | Contraseña | Resultado |
+|--------|------------|-----------|
+| juan.perez@example.com | JuanP@123 | Sesión iniciada correctamente |
 
-### Caso de Prueba #3: Caso Normal - Inicio de sesión con múltiples intentos.
+### Caso de Prueba #2: Caso Normal - Inicio de sesión con recordar sesión activado
 
-### Caso de Prueba #4: Caso Extremo - Inicio de sesión con una contraseña en el límite de longitud.
+| Correo | Contraseña | Recordar Sesión | Resultado |
+|--------|------------|----------------|-----------|
+| maria.lopez@example.com | Maria2024# | Sí | Sesión iniciada y recordada |
 
-### Caso de Prueba #5: Caso Extremo - Inicio de sesión con una contraseña que contiene solo letras minúsculas.
+### Caso de Prueba #3: Caso Normal - Inicio de sesión con múltiples intentos
 
-### Caso de Prueba #6: Caso Extremo - Inicio de sesión con una contraseña que contiene solo números.
+| Correo | Contraseña | Intentos | Resultado |
+|--------|------------|----------|-----------|
+| carlos.r@example.com | Carlos2024# | 2 | Sesión iniciada correctamente |
 
-### Caso de Prueba #7: Caso de Error - Inicio de sesión con contraseña incorrecta.
+### Caso de Prueba #4: Caso Extremo - Inicio de sesión con una contraseña en el límite de longitud
 
-### Caso de Prueba #8: Caso de Error - Inicio de sesión con email no registrado.
+| Correo | Contraseña | Resultado |
+|--------|------------|-----------|
+| luis.gomez@example.com | 32CaracteresLargos1234#@ | Sesión iniciada correctamente |
 
-### Caso de Prueba #9: Caso de Error - Inicio de sesión con un email en formato inválido.
+### Caso de Prueba #5: Caso Extremo - Inicio de sesión con una contraseña que contiene solo letras minúsculas
+
+| Correo | Contraseña | Resultado |
+|--------|------------|-----------|
+| maria.lopez@example.com | mariaclave | Sesión iniciada correctamente |
+
+### Caso de Prueba #6: Caso Extremo - Inicio de sesión con una contraseña que contiene solo números
+
+| Correo | Contraseña | Resultado |
+|--------|------------|-----------|
+| carlos.r@example.com | 12345678 | Sesión iniciada correctamente |
+
+### Caso de Prueba #7: Caso de Error - Inicio de sesión con contraseña incorrecta
+
+| Correo | Contraseña | Error esperado |
+|--------|------------|---------------|
+| juan.perez@example.com | Incorrecta123 | "Contraseña incorrecta" |
+
+### Caso de Prueba #8: Caso de Error - Inicio de sesión con email no registrado
+
+| Correo | Contraseña | Error esperado |
+|--------|------------|---------------|
+| usuario.nuevo@example.com | NuevaClave@456 | "El correo no está registrado" |
+
+### Caso de Prueba #9: Caso de Error - Inicio de sesión con un email en formato inválido
+
+| Correo | Contraseña | Error esperado |
+|--------|------------|---------------|
+| incorrecto.com | Prueba2024# | "Formato de correo inválido" |
+
 
 
 
@@ -328,23 +401,65 @@ Facilita el acceso de los supervisores al sistema.
 
 Permite a los supervisores modificar su contraseña.
 
-### Caso de Prueba #1: Caso Normal - Cambio de contraseña exitoso con credenciales correctas.
+### Caso de Prueba #1: Caso Normal - Cambio de contraseña exitoso con credenciales correctas
 
-### Caso de Prueba #2: Caso Normal - Cambio de contraseña con una clave fuerte.
+| Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
+|--------|---------------------|------------------|-----------|
+| juan.perez@example.com | JuanP@123 | JuanP@456 | Contraseña actualizada |
 
-### Caso de Prueba #3: Caso Normal - Caso Normal - Cambio de contraseña seguido de un inicio de sesión exitoso con la nueva clave.
+### Caso de Prueba #2: Caso Normal - Cambio de contraseña con una clave fuerte
 
-### Caso de Prueba #4: Caso Extremo - Cambio de contraseña con la más larga permitida.
+| Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
+|--------|---------------------|------------------|-----------|
+| maria.lopez@example.com | Maria2024# | MariaFuerte2024! | Contraseña actualizada |
 
-### Caso de Prueba #5: Caso Extremo - Cambio de contraseña utilizando exclusivamente caracteres especiales.
+### Caso de Prueba #3: Caso Normal - Cambio de contraseña seguido de un inicio de sesión exitoso con la nueva clave
 
-### Caso de Prueba #6: Caso Extremo - Cambio de contraseña con caracteres especiales y números.
+| Correo | Contraseña | Resultado |
+|--------|------------|-----------|
+| juan.perez@example.com | JuanP@456 | Sesión iniciada correctamente |
 
-### Caso de Prueba #7: Caso de Error - Intento de cambio de contraseña con la clave anterior incorrecta.
+### Caso de Prueba #4: Caso Extremo - Cambio de contraseña con la más larga permitida
 
-### Caso de Prueba #8: Caso de Error - Intento de cambio de contraseña con claves no coincidentes.
+| Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
+|--------|---------------------|------------------|-----------|
+| luis.gomez@example.com | Luis2023 | 32CaracteresLargos1234#@ | Contraseña actualizada |
 
-### Caso de Prueba #9: Caso de Error - Intento de cambio de contraseña sin estar autenticado.
+### Caso de Prueba #5: Caso Extremo - Cambio de contraseña utilizando exclusivamente caracteres especiales
+
+| Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
+|--------|---------------------|------------------|-----------|
+| maria.lopez@example.com | Maria2024# | @#$%^&*()_+ | Contraseña actualizada |
+
+### Caso de Prueba #6: Caso Extremo - Cambio de contraseña con caracteres especiales y números
+
+| Correo | Contraseña Anterior | Nueva Contraseña | Resultado |
+|--------|---------------------|------------------|-----------|
+| carlos.r@example.com | Carlos2024# | C@rlos1234! | Contraseña actualizada |
+
+### Caso de Prueba #7: Caso de Error - Intento de cambio de contraseña con la clave anterior incorrecta
+
+| Correo | Contraseña Anterior | Nueva Contraseña | Error esperado |
+|--------|---------------------|------------------|---------------|
+| juan.perez@example.com | Incorrecta123 | JuanP@456 | "Contraseña anterior incorrecta" |
+
+### Caso de Prueba #8: Caso de Error - Intento de cambio de contraseña con claves no coincidentes
+
+| Correo | Contraseña Anterior | Nueva Contraseña | Confirmación | Error esperado |
+|--------|---------------------|------------------|--------------|---------------|
+| luis.gomez@example.com | Luis2023 | LuisNuevo2024 | LuisDiferente2024 | "Las contraseñas no coinciden" |
+
+### Caso de Prueba #9: Caso de Error - Intento de cambio de contraseña sin estar autenticado
+
+| Correo | Contraseña Anterior | Nueva Contraseña | Error esperado |
+|--------|---------------------|------------------|---------------|
+| None | None | NuevaClave@2025 | "Usuario no autenticado" |
+
+
+
+
+
+
 
 
 
