@@ -13,13 +13,9 @@ class Archivo:
 
 class Actividad:
     
-    def __init__(self, idactividad: int, fechahora: str, responsable: str, descripcion: str, condicionesclimaticas: str, anexos: list[Archivo], supervisor: Supervisor):
+    def __init__(self, idactividad: int, fechahora: datetime, responsable: str, descripcion: str, condicionesclimaticas: str, anexos: list[Archivo], supervisor: Supervisor):
 
-        try:
-            self.FechaHora = datetime.strptime(fechahora, "%Y-%m-%d %H:%M:%S")
-        except ValueError:
-                # Si falla, lanzamos la excepción personalizada
-            raise ErrorFechaHoraInvalida("Formato incorrecto de fecha y hora")
+        self.fechahora = fechahora
         self.Supervisor = supervisor
         self.Anexos = anexos
         self.CondicionesClimaticas = condicionesclimaticas
