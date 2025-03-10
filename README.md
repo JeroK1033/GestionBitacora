@@ -16,8 +16,10 @@ Caso de Prueba #1: Caso Normal - Registro de Actividad
 |--------------|------------------|------------|--------------------------|------------------------|------------------|
 |    232245    | 08/03/2025 15:36 | Supervisor | Inicio de Nuevo Proyecto |   Nublado y Lluvioso   | InfoProyecto.pdf | 
 
+|                  Supervisor                  |
+|----------------------------------------------|
 |   Nombre   |       Correo       | Contraseña | 
-|------------|--------------------|------------| = Supervisor
+|------------|--------------------|------------| 
 | Juan Perez | juanp225@gmail.com | JuanPz4875 |
 
 
