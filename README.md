@@ -2,7 +2,7 @@
 
 Este repositorio contiene la implementación y pruebas para el sistema de gestión de bitácora. La aplicación permite a los supervisores de obra registrar, consultar y gestionar la bitácora diaria de una construcción, garantizando la trazabilidad de las actividades realizadas en la obra.
 
-Funcionalidades:
+
 
 ## 1. Registrar una actividad
 
@@ -17,11 +17,13 @@ Caso de Prueba #1: Caso Normal - Registro de Actividad
 |    232245    | 08/03/2025 15:36 | Juan Perez | Inicio de Nuevo Proyecto |   Nublado y Lluvioso   | InfoProyecto.pdf | 
 
 
+
 Caso de Prueba #2: Caso Normal - Registro de Actividad con Fecha y Hora
 
 | ID Actividad |    Fecha/Hora    |  Supervisor  |        Descripcion       | Condiciones Climaticas |           Anexos          |
 |--------------|------------------|--------------|--------------------------|------------------------|---------------------------|
 |    498521    | 16/11/2024 22:45 | Lucas Correa |   Revision de Proyecto   |         Soleado        | ProyectoReorganizado.docx | 
+
 
 
 Caso de Prueba #3: Caso Normal - Registro de Actividad con un Anexo Incluido
@@ -31,11 +33,13 @@ Caso de Prueba #3: Caso Normal - Registro de Actividad con un Anexo Incluido
 |    984216    | 01/08/2025 08:27 | Maria Hernandez | Evidencias y Avances Metro Bogota |        Neblina         | EvidenciasMetro.pdf | 
 
 
+
 Caso de Prueba #4: Caso Extremo - Registro de Actividad en el limite del dia
 
 | ID Actividad |    Fecha/Hora    |   Supervisor    |                Descripcion                | Condiciones Climaticas  |             Anexos            |
 |--------------|------------------|-----------------|-------------------------------------------|-------------------------|-------------------------------|
 |    284719    | 03/11/2025 19:40 |  Mateo Herrera  | Detalles técnicos y normativas del diseño |        Tormenta         | Especificaciones_Tecnicas.pdf | 
+
 
 
 Caso de Prueba #5: Caso Extremo - Registro de Actividad con multiples anexos
@@ -45,11 +49,13 @@ Caso de Prueba #5: Caso Extremo - Registro de Actividad con multiples anexos
 |    630582    | 18/06/2024 14:20 | Camila Rodríguez | Diapositivas con información general del proyecto |        Soleado         | Presentacion_Proyecto.pptx | 
 
 
+
 Caso de Prueba #6: Caso Extremo - Registro de Actividad con descripcion larga
 
 | ID Actividad |    Fecha/Hora    |     Supervisor      |                   Descripcion                   | Condiciones Climaticas |       Anexos       |
 |--------------|------------------|---------------------|-------------------------------------------------|------------------------|--------------------|
 |    157943    | 25/12/2023 08:55 | Alejandro Fernández | Imagen digital del diseño exterior del proyecto |        Soleado         | Render_Fachada.png | 
+
 
 
 Caso de Prueba #7: Caso de Error - Registro de Actividad sin descripcion
@@ -59,6 +65,7 @@ Caso de Prueba #7: Caso de Error - Registro de Actividad sin descripcion
 |    902356    | 07/07/2025 22:30 | Santiago Ramírez |    None     |           NN           | Presupuesto_Obra.xlsx | 
 
 
+
 Caso de Prueba #8: Caso de Error - Registro de Actividad con Fecha y Hora Invalida
 
 | ID Actividad |      Fecha/Hora       |   Supervisor    |                      Descripcion                     | Condiciones Climaticas |           Anexos         |
@@ -66,11 +73,13 @@ Caso de Prueba #8: Caso de Error - Registro de Actividad con Fecha y Hora Invali
 |    418275    | 30 de Octubre de 2025 | Valentina Gómez | La cubierta del edificio ha sido instalada con éxito |        LLuvioso        | Planos_Estructurales.pdf | 
 
 
+
 Caso de Prueba #9: Caso de Error - Registro de Actividad sin Anexos
 
 | ID Actividad |    Fecha/Hora    |    Supervisor    |                                 Descripcion                                | Condiciones Climaticas | Anexos |
 |--------------|------------------|------------------|----------------------------------------------------------------------------|------------------------|--------|
 |    765901    | 14/02/2023 16:45 | Camila Rodríguez | Las paredes del proyecto han sido construidas y están listas para acabados |        Nublado         |  None  | 
+
 
 
 
