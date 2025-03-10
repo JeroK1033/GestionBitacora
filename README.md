@@ -124,7 +124,23 @@ Permite consultar actividades en un rango de fechas determinado.
 
 ### Caso de Prueba #1: Caso Normal - Consulta de actividades en un rango válido.
 
+| Fecha Incio |  Fecha Fin | Supervisor | 
+|-------------|------------|------------| 
+| 01/06/2024  | 10/06/2024 | Juan Perez |
+
+|   Resultado  |  
+|--------------|
+| 3 Actividades|
+
+
+
+
 ### Caso de Prueba #2: Caso Normal - Consulta de actividades con fecha específica.
+
+| Fecha Consulta | Supervisor | 
+|----------------|------------| 
+|   01/06/2024   | Juan Perez |
+
 
 ### Caso de Prueba #3: Caso Normal - Consulta de actividades con múltiples filtros.
 
