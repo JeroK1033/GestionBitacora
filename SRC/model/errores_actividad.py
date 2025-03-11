@@ -22,3 +22,6 @@ class ErrorSesionNoIniciada(Exception):
     def __init__(self):
         super().__init__("Para hacer esto, primero inicie sesion")
 
+class ErrorNoAnexos(Exception):
+    def __init__(self):
+        super().__init__("Agregue al menos un anexo")

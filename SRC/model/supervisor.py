@@ -6,7 +6,7 @@ class Supervisor:
         self.correo = correo
         self.nombre = nombre
     
-    def cambiar_contraseña(self):
+    def cambiar_contraseña(self)->str:
         pass
     
     def iniciar_sesion(self):
