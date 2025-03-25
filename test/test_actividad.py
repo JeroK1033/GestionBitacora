@@ -4,7 +4,8 @@ import pytest
 import unittest
 
 from SRC.model.errores_actividad import ErrorDescripcion,ErrorFechaHora,ErrorFechaHoraInvalida, ErrorFechaInvalida, ErrorNoFechas, ErrorSesionNoIniciada, ErrorNoAnexos
-from SRC.model.errores_usuario import ErrorNoEmail,ErrorEmailNo,ErrorEmailYa,ErrorContraseñaCorta,ErrorContraseñaIncorrecta,ErrorContraseñaAnteriorIn,ErrorContraseñaNoCoincide
+from SRC.model.errores_usuario import ErrorNoEmail, ErrorEmailNo, ErrorEmailYa, ErrorContraseñaCorta, \
+    ErrorContraseñaIncorrecta, ErrorContraseñaAnteriorIn, ErrorContraseñaNoCoincide, ErrorCamposIncompletos
 from SRC.model.actividad import Actividad,Archivo
 from SRC.model.supervisor import Supervisor, Reporte
 
@@ -213,7 +214,7 @@ class GenerarReporte(unittest.TestCase):
 class CrearCuenta(unittest.TestCase):
     def test_registro_exitoso(self):
         usuario = Supervisor("Juan Perez", "juan.perez@example.com", "JuanP@123")
-        assert usuario is False
+        assert Supervisor.registrarse(usuario)
 
     def test_registro_con_email_valido(self):
         usuario = Supervisor("Maria Lopez", "maria.lopez@example.com", "Maria2024#")
@@ -322,3 +323,4 @@ class CambiarContraseña(unittest.TestCase):
     def test_cambio_contraseña_sin_autenticacion(self):
         with self.assertRaises(ErrorEmailNo):
             Supervisor(None, None, None).cambiar_contraseña("NuevaClave@2025")
+
